@@ -1,25 +1,40 @@
-class heroCharacter (){
-    constructor (heroName, age, type){
+class heroCharacter {
+
+    constructor (type, heroName, age){
         this.heroName = heroName
         this.age = age
         this.type = type
+               
     }
 
     atacar(){
-        se mago -> no ataque exibir (usou magia)
-        se guerreiro -> no ataque exibir (usou espada)
-        se monge -> no ataque exibir (usou artes marciais)
-        se ninja -> no ataque exibir (usou shuriken)
-       
         
+       if (this.type === "mago"){    
+        this.ataque = " magia"
+        
+        } else if (this.type === "guerreiro"){
+            this.ataque = " espada"
 
+        } else if (this.type === "monge"){
+            this.ataque = " artes maciais"
 
-     }
+        } else if (this.type === "ninja"){
+            this.ataque = " shuriken"    
+        }
+       
+       
 
+    }
      escrever(){
-        console.log(`O ${type} atacou usando ${ataque}`)
+        console.log(`O ${this.type} atacou usando ${this.ataque}`)
 
      }
 
 
 }
+
+
+let gameResume = new heroCharacter("ninja")
+gameResume.atacar()
+gameResume.escrever()
+
